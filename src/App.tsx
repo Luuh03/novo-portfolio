@@ -1,4 +1,5 @@
 import './App.css'
+import Home from './components/home/Home'
 import Navbar from './components/navbar/Navbar'
 
 function App() {
@@ -6,6 +7,9 @@ function App() {
   return (
     <>
       <Navbar />
+      <main>
+        <Home />
+      </main>
     </>
   )
 }
