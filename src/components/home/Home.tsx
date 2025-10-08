@@ -5,7 +5,7 @@ import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si"
 function Home() {
   return (
     <>
-      <div className="flex justify-center bg-(--card-background) py-12">
+      <div className="flex justify-center bg-(--card-background) py-16">
         <div className="ml-9 lg:ml-0 container grid sm:grid-cols-2 lg:grid-cols-3 gap-9 lg:gap-0">
           <img src="https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/foto_principal?updatedAt=1758736922057"
             alt="Foto Luan Queiroz com fundo degrade azul"
@@ -20,7 +20,7 @@ function Home() {
             <button className="flex py-3 px-6 bg-(--blue) gap-1 text-white rounded-lg max-w-[9.75rem]
               transition duration-200 hover:bg-(--dark-blue) cursor-pointer">
               <HiDocumentDownload size={24} />
-              <a href="https://drive.google.com/uc?export=download&id=1LhEJ9mPSFHgu20KkiHPdI8YVhWiOaiQp">Baixar CV</a>
+              <a href="https://drive.google.com/uc?export=download&id=12-GS1_dxwjB4NMFR2JpV9BWy2Ctabju7">Baixar CV</a>
             </button>
           </div>
 
