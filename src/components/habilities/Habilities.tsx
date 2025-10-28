@@ -3,7 +3,7 @@ import HabilityBox from "./HabilityBox";
 
 function Habilities() {
   return (
-    <div>
+    <div className="pt-24">
       <h2 className="text-[2.438rem] text-white font-medium">Habilidades</h2>
       <span className="text-base text-(--text-color)">Tecnologias que utilizo no dia a dia</span>
 

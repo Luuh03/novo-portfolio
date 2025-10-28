@@ -2,7 +2,7 @@
 
 function About() {
   return (
-    <div className="col-span-1 text-(--text-color) flex flex-col gap-3">
+    <div className="pt-24 col-span-1 text-(--text-color) flex flex-col gap-3" id="about">
       <h2 className="text-[2.438rem] text-white font-medium">Sobre mim</h2>
 
       <p>Desenvolvedor FullStack com conhecimentos em React, HTML, CSS, JavaScript, Typescript e Java. 
