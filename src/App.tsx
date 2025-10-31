@@ -4,6 +4,8 @@ import About from './components/about/About'
 import Habilities from './components/habilities/Habilities'
 import Home from './components/home/Home'
 import Navbar from './components/navbar/Navbar'
+import Experiences from './components/experiences/Experiences'
+import Masonry from 'react-masonry-css'
 
 type MenuState = 'closed' | 'open'
 
@@ -28,10 +30,11 @@ function App() {
       />
       <main className='pt-[4.061rem]'>
         <Home />
-        <article className='container max-xl:max-w-fit mx-auto grid xl:grid-cols-2 gap-x-[6.875rem] py-14 px-5'>
+        <Masonry breakpointCols={{default: 2, 1280: 1}} className='flex container max-xl:max-w-fit mx-auto gap-x-[6.875rem] py-14 px-5'>
           <About />
           <Habilities />
-        </article>
+          <Experiences />
+        </Masonry>
       </main>
     </>
   )
