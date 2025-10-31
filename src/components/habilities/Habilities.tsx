@@ -12,12 +12,12 @@ function Habilities() {
           <div>
 
             <h3 className="text-white text-2xl py-5.5">{section.name}</h3>
-            <div className="grid grid-cols-2
+            <div className="grid-cols-2
               xm:grid-cols-3
               sm:grid-cols-5
               lg:grid-cols-6
               xl:grid-cols-4
-              2xl:grid-cols-5 gap-5.5 justify-items-center">
+              2xl:grid-cols-5 gap-5.5 justify-items-center inline-grid">
               {
                 section.list.map((hability) => (
                   <HabilityBox key={hability.id} hability={hability} />
