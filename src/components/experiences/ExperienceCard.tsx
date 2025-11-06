@@ -1,31 +1,51 @@
+import type { Technology } from "./ExperiencesInfo"
+
+interface Experience {
+  companyLogo: string,
+  beginningDate: string,
+  endingDate: string,
+  role: string,
+  description: string,
+  technologies?: Technology[] | null,
+  skills?: string | null
+}
+
+interface ExperienceProps {
+  experience: Experience
+}
 
 
-function ExperienceCard() {
+function ExperienceCard({ experience }: ExperienceProps) {
   return (
     <div className="bg-(--card-background) rounded-2xl p-9 text-(--text-color)">
       <div className="flex gap-3 justify-between items-center max-xm:items-start max-xm:flex-col-reverse">
-        <img src="https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Companies%20Logos/generation.png?updatedAt=1761927229942" alt="Logo Generation Brasil"
+        <img src={experience.companyLogo} alt="Logo Generation Brasil"
           className="w-32" />
-        <span className="font-medium">Abr/2025 - Jun/2025</span>
+        <span className="font-medium">{experience.beginningDate} - {experience.endingDate}</span>
       </div>
 
-      <h3 className="font-semibold text-white py-6 text-xl">Desenvolvedor Full Stack Junior</h3>
+      <h3 className="font-semibold text-white py-6 text-xl">{experience.role}</h3>
 
-      <p className="">Participação em bootcamp intensivo focado em aprimorar conhecimentos Java e React
-      com entrega de projetos e desenvolvimento de softskills.</p>
+      <p className="">{experience.description}</p>
 
-      <h4 className="font-medium text-(--light-blue) pb-3 pt-5">Tecnologias:</h4>
-      
-      <div className="flex gap-3 flex-wrap">
-        <img src="https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Tecnologies%20Icons/java.png?updatedAt=1760806380788" alt="Tech icon" className="h-8" />
-        <img src="https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Tecnologies%20Icons/java.png?updatedAt=1760806380788" alt="Tech icon" className="h-8" />
-        <img src="https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Tecnologies%20Icons/java.png?updatedAt=1760806380788" alt="Tech icon" className="h-8" />
-        <img src="https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Tecnologies%20Icons/java.png?updatedAt=1760806380788" alt="Tech icon" className="h-8" />
-        <img src="https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Tecnologies%20Icons/java.png?updatedAt=1760806380788" alt="Tech icon" className="h-8" />
-        <img src="https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Tecnologies%20Icons/java.png?updatedAt=1760806380788" alt="Tech icon" className="h-8" />
-        <img src="https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Tecnologies%20Icons/java.png?updatedAt=1760806380788" alt="Tech icon" className="h-8" />
-        <img src="https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Tecnologies%20Icons/java.png?updatedAt=1760806380788" alt="Tech icon" className="h-8" />
-      </div>
+      {
+        experience.technologies ? (
+
+          <>
+            <h4 className="font-medium text-(--light-blue) pb-3 pt-5">Tecnologias:</h4>
+
+            <div className="flex gap-3 flex-wrap">
+              {
+                experience.technologies.map((tech) => (
+                  <img src={tech.image} alt={tech.name} className="h-8" />
+                ))
+              }
+            </div>
+          </>
+        ) : (
+          <p className="pt-5"><span className="font-medium text-(--light-blue) pr-2">Habilidades:</span>{experience.skills}</p>
+        )
+      }
 
     </div>
   )
