@@ -2,6 +2,7 @@ import type { Technology } from "./ExperiencesInfo"
 
 interface Experience {
   companyLogo: string,
+  companyName: string,
   beginningDate: string,
   endingDate: string,
   role: string,
@@ -17,9 +18,9 @@ interface ExperienceProps {
 
 function ExperienceCard({ experience }: ExperienceProps) {
   return (
-    <div className="bg-(--card-background) rounded-2xl p-9 text-(--text-color)">
+    <div className="bg-(--card-background) rounded-2xl p-9 text-(--text-color) shadow-lg/40">
       <div className="flex gap-3 justify-between items-center max-xm:items-start max-xm:flex-col-reverse">
-        <img src={experience.companyLogo} alt="Logo Generation Brasil"
+        <img src={experience.companyLogo} alt={`Logo ` + experience.companyName}
           className="w-32" />
         <span className="font-medium">{experience.beginningDate} - {experience.endingDate}</span>
       </div>
@@ -37,7 +38,7 @@ function ExperienceCard({ experience }: ExperienceProps) {
             <div className="flex gap-3 flex-wrap">
               {
                 experience.technologies.map((tech) => (
-                  <img src={tech.image} alt={tech.name} className="h-8" />
+                  <img src={tech.image} alt={tech.name} title={tech.name} className="h-8" />
                 ))
               }
             </div>

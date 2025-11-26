@@ -9,7 +9,7 @@ function Habilities() {
 
       {
         Techs.map((section) => (
-          <div>
+          <div className="max-sm:flex flex-col justify-center">
 
             <h3 className="text-white text-2xl py-5.5">{section.name}</h3>
             <div className="grid-cols-2

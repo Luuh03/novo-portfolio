@@ -15,6 +15,7 @@ const ExperiencesInfo = [
   {
     id: 1,
     companyLogo: "https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Companies%20Logos/generation.png?updatedAt=1761927229942",
+    companyName: "Generation Brasil",
     beginningDate: "Abr/2025",
     endingDate: "Jun/2025",
     role: "Desenvolvedor Full Stack Junior",
@@ -24,6 +25,7 @@ const ExperiencesInfo = [
   {
     id: 2,
     companyLogo: "https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Companies%20Logos/goodbom.png?updatedAt=1762458247773",
+    companyName: "GoodBom Supermercados",
     beginningDate: "Out/2024",
     endingDate: "Mar/2025",
     role: "Operador de Loja II",
@@ -33,6 +35,7 @@ const ExperiencesInfo = [
   {
     id: 3,
     companyLogo: "https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Companies%20Logos/apex.png?updatedAt=1761927229586",
+    companyName: "Apex América",
     beginningDate: "Mai/2024",
     endingDate: "Jun/2024",
     role: "Consultor de Atendimento Bilíngue (Inglês)",
@@ -42,6 +45,7 @@ const ExperiencesInfo = [
   {
     id: 4,
     companyLogo: "https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Companies%20Logos/ci&t.png?updatedAt=1761927229797",
+    companyName: "CI&T",
     beginningDate: "Fev/2022",
     endingDate: "Mar/2023",
     role: "Estagiário de Desenvolvimento",
