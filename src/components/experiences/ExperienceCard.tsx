@@ -38,7 +38,7 @@ function ExperienceCard({ experience }: ExperienceProps) {
             <div className="flex gap-3 flex-wrap">
               {
                 experience.technologies.map((tech) => (
-                  <img src={tech.image} alt={tech.name} title={tech.name} className="h-8" />
+                  <img src={tech.image} alt={tech.name} title={tech.name} className="h-8 hover:scale-110 transition-all duration-250" />
                 ))
               }
             </div>

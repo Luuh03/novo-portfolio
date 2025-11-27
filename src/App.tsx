@@ -6,6 +6,7 @@ import Home from './components/home/Home'
 import Navbar from './components/navbar/Navbar'
 import Experiences from './components/experiences/Experiences'
 import Masonry from 'react-masonry-css'
+import Projects from './components/projects/Projects'
 
 type MenuState = 'closed' | 'open'
 
@@ -34,6 +35,7 @@ function App() {
           <About />
           <Habilities />
           <Experiences />
+          <Projects />
         </Masonry>
       </main>
     </>
