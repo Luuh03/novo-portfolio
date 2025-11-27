@@ -1,4 +1,4 @@
-import type { Technology } from "./ExperiencesInfo"
+import type { Technology } from "../habilities/HabilitiesInfo"
 
 interface Experience {
   companyLogo: string,

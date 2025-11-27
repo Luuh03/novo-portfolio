@@ -1,3 +1,9 @@
+export type Technology = {
+  id: number;
+  name: string;
+  image: string;
+}
+
 const Techs = [
   {
     name: "Front-end",

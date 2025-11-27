@@ -1,15 +1,4 @@
-import Techs from "../habilities/HabilitiesInfo"
-
-export type Technology = {
-  id: number;
-  name: string;
-  image: string;
-}
-
-const addTechs = (techNames: string[]): Technology[] => {
-  const allTechs = Techs.flatMap((t) => t.list);
-  return allTechs.filter((tech) => techNames.includes(tech.name))
-}
+import { addTechs } from "../../utils/AddTechs"
 
 const ExperiencesInfo = [
   {
