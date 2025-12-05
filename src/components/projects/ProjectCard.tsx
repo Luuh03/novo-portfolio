@@ -1,12 +1,17 @@
 import type { Project } from "./ProjectsInfo"
+import { useState } from "react"
+import Modal from "./Modal";
 
 interface ProjectProps {
   project: Project
 }
 
-function ProjectCard({project}: ProjectProps) {
+function ProjectCard({ project }: ProjectProps) {
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className="group cursor-pointer flex flex-col w-60 transition-all duration-250 hover:scale-110 bg-(--card-background) shadow-lg/40 rounded-lg overflow-hidden">
+    <div onClick={() => setOpen(true)}
+      className="group cursor-pointer flex flex-col w-60 transition-all duration-250 hover:scale-110 bg-(--card-background) shadow-lg/40 rounded-lg overflow-hidden">
 
       <div className="relative rounded-lg overflow-hidden">
         <img
@@ -49,7 +54,20 @@ function ProjectCard({project}: ProjectProps) {
           ))
         }
       </div>
+      
+      <Modal open={open} onClose={() => setOpen(false)}>
+        <h2 className="text-xl font-semibold mb-4">Projeto Legal 🚀</h2>
+        <p className="mb-4">
+          Aqui você pode colocar descrição, imagens, links, tecnologias, etc.
+        </p>
 
+        <button
+          onClick={() => setOpen(false)}
+          className="px-4 py-2 bg-neutral-800 text-white rounded-lg"
+        >
+          Fechar
+        </button>
+      </Modal>
     </div>
   )
 }
