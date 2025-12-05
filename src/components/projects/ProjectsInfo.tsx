@@ -17,38 +17,40 @@ const ProjectsInfo = [
   {
     id: 5,
     name: "GoLady",
-    about: "O Wedfy é a primeira versão de uma aplicação web de freelancing, onde desenvolvedores podem ter acesso a trabalhos para ganhar experiência profissional e receber algum direcionamento por meio de recomendações de notícias da área dependendo do nicho que ele deseja adquirir mais conhecimento. Este projeto foi desenvolvido como Trabalho e Conclusão de Curso para minha graduação em Análise e Desenvolvimento de Sistemas.",
+    about: "Este projeto tem como objetivo implementar um aplicativo de carona compartilhada exclusivo para mulheres, permitindo o gerenciamento eficiente das viagens oferecidas e realizadas. O sistema é responsável por realizar operações de CRUD (Create, Read, Update, Delete) sobre as principais entidades do aplicativo: usuários, viagens e veículos cadastrados. A plataforma simula um sistema completo de gestão de corridas, priorizando a experiência da usuária, a eficiência no serviço e, acima de tudo, a segurança.",
     prints: [
       "https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Projects/golady.png?updatedAt=1763434255988"
     ],
     technologies: addTechs(["Spring Boot", "React", "MySQL", "Java", "HTML5", "CSS3", "TypeScript", "Tailwind CSS", "Git"]),
     mainTechnologies: addTechs(["Spring Boot", "React", "MySQL"]),
-    github: "https://github.com/Luuh03/Frontend-WedFY",
-    completionDate: "Em andamento"
+    deploy: "https://golady.netlify.app",
+    github: "https://github.com/Projetos-Grupo-01/GoLady_frontend",
+    completionDate: "29 de Julho de 2025"
   },
   {
     id: 4,
     name: "FisioCare",
-    about: "O Wedfy é a primeira versão de uma aplicação web de freelancing, onde desenvolvedores podem ter acesso a trabalhos para ganhar experiência profissional e receber algum direcionamento por meio de recomendações de notícias da área dependendo do nicho que ele deseja adquirir mais conhecimento. Este projeto foi desenvolvido como Trabalho e Conclusão de Curso para minha graduação em Análise e Desenvolvimento de Sistemas.",
+    about: "Este projeto propõe o desenvolvimento de um serviço voltado ao gerenciamento e acompanhamento das rotinas de treino de pacientes em fisioterapia. A aplicação será estruturada para realizar operações de CRUD (Create, Read, Update, Delete) sobre as entidades centrais do sistema: usuários, exercícios e categorias. O gerenciamento eficiente desses recursos é complementado pela implementação de uma camada de segurança, visando assegurar a integridade dos dados e o controle de acesso por meio de autenticação e autorização.",
     prints: [
       "https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Projects/fisiocare.png?updatedAt=1763434255582"
     ],
     technologies: addTechs(["Spring Boot", "React", "MySQL", "Java", "HTML5", "CSS3", "TypeScript", "Tailwind CSS", "Git"]),
     mainTechnologies: addTechs(["Spring Boot", "React", "MySQL"]),
-    github: "https://github.com/Luuh03/Frontend-WedFY",
-    completionDate: "Em andamento"
+    deploy: "https://octacode-fisiocare.netlify.app",
+    github: "https://github.com/Projetos-Grupo-01/FisioCare_frontend",
+    completionDate: "11 de Julho de 2025"
   },
   {
     id: 3,
     name: "Garfo&Go",
-    about: "O Wedfy é a primeira versão de uma aplicação web de freelancing, onde desenvolvedores podem ter acesso a trabalhos para ganhar experiência profissional e receber algum direcionamento por meio de recomendações de notícias da área dependendo do nicho que ele deseja adquirir mais conhecimento. Este projeto foi desenvolvido como Trabalho e Conclusão de Curso para minha graduação em Análise e Desenvolvimento de Sistemas.",
+    about: "Este projeto tem como objetivo implementar um sistema de delivery de alimentos, que permite o gerenciamento de produtos oferecidos por diferentes restaurantes. O sistema é responsável por realizar operações de CRUD (Create, Read, Update, Delete) sobre os produtos cadastrados. A interface foi desenvolvida com React, Vite, Tailwind e TypeScript, simulando o sistema de delivery de alimentos, com foco na apresentação da interface e funcionalidades como visualização de produtos, cadastro, edição e exclusão, utilizando dados simulados (mock).",
     prints: [
       "https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Projects/garfogo.png?updatedAt=1763434255879"
     ],
     technologies: addTechs(["Spring Boot", "React", "MySQL", "Java", "HTML5", "CSS3", "TypeScript", "Tailwind CSS", "Git"]),
     mainTechnologies: addTechs(["Spring Boot", "React", "MySQL"]),
-    github: "https://github.com/Luuh03/Frontend-WedFY",
-    completionDate: "Em andamento"
+    github: "https://github.com/Projetos-Grupo-01/GarfoeGo-frontend",
+    completionDate: "3 de Julho de 2025"
   },
   {
     id: 2,
@@ -70,7 +72,7 @@ const ProjectsInfo = [
     prints: [
       "https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/Projects/wedfy.png?updatedAt=1763434255321"
     ],
-    technologies: addTechs(["Spring Boot", "React", "MySQL", "Java", "HTML5", "CSS3", "TypeScript", "Tailwind CSS", "Git"]),
+    technologies: addTechs(["ASP.NET", "React", "MySQL", "CSharp", "HTML5", "CSS3", "Git"]),
     mainTechnologies: addTechs(["ASP.NET", "React", "MySQL"]),
     github: "https://github.com/Luuh03/Frontend-WedFY",
     completionDate: "Em andamento"
