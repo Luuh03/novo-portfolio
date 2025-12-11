@@ -54,20 +54,8 @@ function ProjectCard({ project }: ProjectProps) {
           ))
         }
       </div>
-      
-      <Modal open={open} onClose={() => setOpen(false)}>
-        <h2 className="text-xl font-semibold mb-4">Projeto Legal 🚀</h2>
-        <p className="mb-4">
-          Aqui você pode colocar descrição, imagens, links, tecnologias, etc.
-        </p>
 
-        <button
-          onClick={() => setOpen(false)}
-          className="px-4 py-2 bg-neutral-800 text-white rounded-lg"
-        >
-          Fechar
-        </button>
-      </Modal>
+      <Modal open={open} onClose={() => setOpen(false)} project={project} />
     </div>
   )
 }
