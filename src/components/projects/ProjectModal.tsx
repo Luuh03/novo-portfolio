@@ -4,13 +4,12 @@ import type { Project } from "./ProjectsInfo"
 import { SiGithub } from "react-icons/si";
 import { HiExternalLink, HiX } from "react-icons/hi";
 
-interface ModalProps {
-  open: boolean;
-  onClose: () => void;
+interface ProjectModalProps {
   project: Project;
+  onClose: () => void;
 }
 
-export function Modal({ open, onClose, project }: ModalProps) {
+export function ProjectModal({ project, onClose }: ProjectModalProps) {
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const contentRef = useRef<HTMLDivElement | null>(null);
 
@@ -19,14 +18,12 @@ export function Modal({ open, onClose, project }: ModalProps) {
       if (e.key === "Escape") onClose();
     }
 
-    if (open) {
+    if (project.id) {
       document.addEventListener("keydown", handleEsc);
       return () => document.removeEventListener("keydown", handleEsc);
     }
 
-  }, [open, onClose]);
-
-  if (!open) return null;
+  }, [project.id, onClose]);
 
   return createPortal(
     <div
@@ -46,7 +43,7 @@ export function Modal({ open, onClose, project }: ModalProps) {
 
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-3xl text-white font-semibold">{project.name}</h2>
-          <HiX size={28} fill="white" className="cursor-pointer transition duration-150 hover:bg-white/20 rounded-full" />
+          <HiX size={28} fill="white" className="cursor-pointer transition duration-150 hover:bg-white/20 rounded-full" onClick={onClose} />
         </div>
         <div className="grid grid-cols-2 gap-8">
           <div className="flex flex-col gap-5">
@@ -54,17 +51,16 @@ export function Modal({ open, onClose, project }: ModalProps) {
 
             <div className="flex gap-3 justify-between">
               {project.deploy && (
-                <a href={project.deploy}
-                  className="flex gap-3 items-center text-white p-2 bg-(--blue) hover:bg-(--dark-blue) rounded-lg transition duration-200">
+                
+                <a href={project.deploy} target="_blank" rel="noopener noreferrer"
+                  className="flex gap-2 items-center text-white p-2 bg-(--blue) hover:bg-(--dark-blue) rounded-lg transition duration-200">
                   <HiExternalLink size={24} fill="white" />
                   Acessar projeto
                 </a>
-              )
+              )}
 
-              }
-
-              <a href={project.github}
-                className="flex gap-3 items-center text-white p-2 bg-violet-800 hover:bg-violet-950 rounded-lg transition duration-200">
+              <a href={project.github} target="_blank" rel="noopener noreferrer"
+                className="flex gap-2 items-center text-white p-2 bg-violet-800 hover:bg-violet-950 rounded-lg transition duration-200">
                 <SiGithub size={24} />
                 Acessar repositório
               </a>
@@ -101,4 +97,4 @@ export function Modal({ open, onClose, project }: ModalProps) {
   )
 }
 
-export default Modal
+export default ProjectModal

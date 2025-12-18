@@ -1,16 +1,14 @@
 import type { Project } from "./ProjectsInfo"
-import { useState } from "react"
-import Modal from "./Modal";
 
-interface ProjectProps {
+interface ProjectCardProps {
   project: Project
+  onSelect: () => void
 }
 
-function ProjectCard({ project }: ProjectProps) {
-  const [open, setOpen] = useState(false);
+function ProjectCard({ project, onSelect }: ProjectCardProps) {
 
   return (
-    <div onClick={() => setOpen(true)}
+    <div onClick={onSelect}
       className="group cursor-pointer flex flex-col w-60 transition-all duration-250 hover:scale-110 bg-(--card-background) shadow-lg/40 rounded-lg overflow-hidden">
 
       <div className="relative rounded-lg overflow-hidden">
@@ -54,8 +52,6 @@ function ProjectCard({ project }: ProjectProps) {
           ))
         }
       </div>
-
-      <Modal open={open} onClose={() => setOpen(false)} project={project} />
     </div>
   )
 }

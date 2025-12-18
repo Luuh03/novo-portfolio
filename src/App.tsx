@@ -7,12 +7,15 @@ import Navbar from './components/navbar/Navbar'
 import Experiences from './components/experiences/Experiences'
 import Masonry from 'react-masonry-css'
 import Projects from './components/projects/Projects'
+import type { Project } from './components/projects/ProjectsInfo'
+import ProjectModal from './components/projects/ProjectModal'
 
 type MenuState = 'closed' | 'open'
 
 function App() {
 
   const [menuState, setMenuState] = useState<MenuState>('closed')
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   const toggleMenu = (): void => {
     setMenuState(prevState => prevState === 'closed' ? 'open' : 'closed')
@@ -31,13 +34,17 @@ function App() {
       />
       <main className='pt-[4.061rem]'>
         <Home />
-        <Masonry breakpointCols={{default: 2, 1280: 1}} className='flex container max-xl:max-w-fit mx-auto gap-x-[6.875rem] py-14 px-5'>
+        <Masonry breakpointCols={{ default: 2, 1280: 1 }} className='flex container max-xl:max-w-fit mx-auto gap-x-[6.875rem] py-14 px-5'>
           <About />
           <Habilities />
           <Experiences />
-          <Projects />
+          <Projects onSelectProject={setSelectedProject} />
         </Masonry>
       </main>
+
+      {selectedProject && (
+        <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+      )}
     </>
   )
 }
