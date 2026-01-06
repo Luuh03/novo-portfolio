@@ -9,6 +9,7 @@ import Masonry from 'react-masonry-css'
 import Projects from './components/projects/Projects'
 import type { Project } from './components/projects/ProjectsInfo'
 import ProjectModal from './components/projects/ProjectModal'
+import Contact from './components/contact/Contact'
 
 type MenuState = 'closed' | 'open'
 
@@ -40,6 +41,7 @@ function App() {
           <Experiences />
           <Projects onSelectProject={setSelectedProject} />
         </Masonry>
+        <Contact />
       </main>
 
       {selectedProject && (
