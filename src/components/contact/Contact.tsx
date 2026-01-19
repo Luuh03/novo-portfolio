@@ -55,7 +55,7 @@ function Contact() {
 
         <form className="flex flex-col gap-4" action="https://formsubmit.co/4a4fe657f235893f6cfe8fe58e77bc66" onSubmit={handleSubmit} method="post" ref={formRef}>
 
-          <input type="hidden" name="_next" value="http://localhost:5173/#"></input>
+          <input type="hidden" name="_next" value="https://luan-queiroz.vercel.app"></input>
           <input type="hidden" name="_captcha" value="false"></input>
 
           <div className="flex gap-8 w-full">
