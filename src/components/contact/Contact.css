@@ -1,8 +1,23 @@
 input,
 textarea {
     background-color: var(--background-color);
+    transition: all 0.1s;
 
     padding: 0.625rem;
     border-radius: 0.5rem;
     border: 1px solid var(--blue);
+}
+
+input:hover,
+textarea:hover {
+    border: 1px solid var(--light-blue);
+}
+
+input:active,
+textarea:active {
+    transform: scale(0.98);
+}
+
+.input-error {
+    border-color: var(--color-red-500);
 }
