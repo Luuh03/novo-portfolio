@@ -38,16 +38,16 @@ function Navbar({ menuState, onMenuToggle, onMenuClose }: Readonly<NavbarProps>)
               <a href="#about">Sobre mim</a>
             </li>
             <li>
-              <a href="">Habilidades</a>
+              <a href="#habilities">Habilidades</a>
             </li>
             <li>
-              <a href="">Experiências</a>
+              <a href="#experiences">Experiências</a>
             </li>
             <li>
-              <a href="">Projetos</a>
+              <a href="#projects">Projetos</a>
             </li>
             <li>
-              <a href="">Contato</a>
+              <a href="#contact">Contato</a>
             </li>
           </ul>
         </nav>

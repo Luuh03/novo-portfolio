@@ -4,7 +4,7 @@ import ExperiencesInfo from "./ExperiencesInfo"
 
 function Experiences() {
   return (
-    <div className="pt-24">
+    <div className="pt-24" id="experiences">
       <h2 className="pb-6 text-[2.438rem] text-white font-medium">Experiência</h2>
       <div className="gap-15 flex flex-col">
 

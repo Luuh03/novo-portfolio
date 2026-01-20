@@ -37,9 +37,9 @@ function Home() {
                 Luan Queiroz
               </a>
               <a className="flex gap-2 transition duration-200 hover:text-white cursor-pointer hover:scale-105"
-                href="mailto:luan.queiroz2003@gmail.com">
+                href="mailto:luanemidio.dev@gmail.com">
                 <SiGmail size={24} className="text-(--light-blue)" />
-                luan.queiroz2003@gmail.com
+                luanemidio.dev@gmail.com
               </a>
             </ul>
           </div>
