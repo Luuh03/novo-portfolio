@@ -10,6 +10,7 @@ import Projects from './components/projects/Projects'
 import type { Project } from './components/projects/ProjectsInfo'
 import ProjectModal from './components/projects/ProjectModal'
 import Contact from './components/contact/Contact'
+import Footer from './components/footer/Footer'
 
 type MenuState = 'closed' | 'open'
 
@@ -42,6 +43,7 @@ function App() {
           <Projects onSelectProject={setSelectedProject} />
         </Masonry>
         <Contact />
+        <Footer />
       </main>
 
       {selectedProject && (
