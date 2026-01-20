@@ -21,3 +21,34 @@ textarea:active {
 .input-error {
     border-color: var(--color-red-500);
 }
+
+.contact-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.2s;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.contact-option:hover {
+    scale: 1.1;
+    cursor: pointer;
+    background-color: var(--card-background);
+}
+
+.contact-option svg {
+    color: var(--light-blue);
+    margin-bottom: 1rem;
+}
+
+.contact-option h3 {
+    font-size: 1.25rem;
+    color: var(--light-blue);
+    font-weight: 500;
+}
+
+.contact-option p {
+    font-size: 1.125rem;
+    color: white;
+}

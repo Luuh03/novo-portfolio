@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react"
 import "./Contact.css"
 import type { FormErrors, Email } from "../../models/Email"
 import { validate } from "../../utils/VerifyEmailVal"
+import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si"
 
 function Contact() {
   //Captcha validation
@@ -49,7 +50,7 @@ function Contact() {
   }
 
   return (
-    <div className="flex container mx-auto justify-center my-12 px-15">
+    <div className="flex container mx-auto justify-center my-12 px-15 flex-col gap-20" id="contact">
       <div className="w-full bg-(--card-background) shadow-lg/40 rounded-2xl p-8 text-white">
         <h2 className="pb-6 text-[2.438rem] font-medium">Contato</h2>
 
@@ -87,10 +88,10 @@ function Contact() {
             <label htmlFor="subject">Assunto</label>
             <input id="subject" type="text" name="subject" placeholder="Digite aqui o assunto"
               onChange={handleChange}
-                value={emailValues.subject}
+              value={emailValues.subject}
               className={errors.subject ? "input-error" : ""}
-              />
-              {errors.subject ? errors.subject : ""}
+            />
+            {errors.subject ? errors.subject : ""}
 
             <span id="txtSubject"></span>
           </div>
@@ -101,8 +102,8 @@ function Contact() {
               onChange={handleChange}
               value={emailValues.message}
               className={errors.message ? "input-error" : ""}
-              ></textarea>
-              {errors.message ? errors.message : ""}
+            ></textarea>
+            {errors.message ? errors.message : ""}
           </div>
 
           <ReCAPTCHA
@@ -117,6 +118,29 @@ function Contact() {
             type="submit" disabled={!capValue}>Enviar</button>
 
         </form>
+      </div>
+      <div className="flex justify-center gap-11">
+        <a href="mailto:luanemidio.dev@gmail.com">
+          <div className="contact-option">
+            <SiGmail size={64} />
+            <h3>E-mail</h3>
+            <p>luanemidio.dev@gmail.com</p>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/luan-queiroz/" target="_blank">
+          <div className="contact-option">
+            <SiLinkedin size={64} />
+            <h3>LinkedIn</h3>
+            <p>Luan Emidio de Queiroz</p>
+          </div>
+        </a>
+        <a href="https://github.com/Luuh03" target="_blank">
+          <div className="contact-option">
+            <SiGithub size={64} />
+            <h3>GitHub</h3>
+            <p>Luuh03</p>
+          </div>
+        </a>
       </div>
     </div>
   )
