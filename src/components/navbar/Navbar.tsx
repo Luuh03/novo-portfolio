@@ -81,16 +81,16 @@ function Navbar({ menuState, onMenuToggle, onMenuClose }: Readonly<NavbarProps>)
                 <a href="#about" onClick={handleMenuClose}>Sobre mim</a>
               </li>
               <li>
-                <a href="">Habilidades</a>
+                <a href="#habilities" onClick={handleMenuClose}>Habilidades</a>
               </li>
               <li>
-                <a href="">Experiências</a>
+                <a href="#experiences" onClick={handleMenuClose}>Experiências</a>
               </li>
               <li>
-                <a href="">Projetos</a>
+                <a href="#projects" onClick={handleMenuClose}>Projetos</a>
               </li>
               <li>
-                <a href="">Contato</a>
+                <a href="#contact" onClick={handleMenuClose}>Contato</a>
               </li>
             </ul>
           </nav>

@@ -59,7 +59,7 @@ function Contact() {
           <input type="hidden" name="_next" value="https://luan-queiroz.vercel.app"></input>
           <input type="hidden" name="_captcha" value="false"></input>
 
-          <div className="flex gap-8 w-full">
+          <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 w-full">
             <div className="flex flex-col w-full gap-1.5">
               <label htmlFor="name">Nome</label>
               <input id="name" type="text" name="name" placeholder="Digite aqui seu nome"
