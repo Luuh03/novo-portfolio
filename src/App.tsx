@@ -36,7 +36,7 @@ function App() {
       />
       <main className='pt-[4.061rem]'>
         <Home />
-        <Masonry breakpointCols={{ default: 2, 1280: 1 }} className='flex container max-xl:max-w-fit mx-auto gap-x-[6.875rem] py-14 px-5'>
+        <Masonry breakpointCols={{ default: 2, 1280: 1 }} className='flex container max-xl:max-w-fit mx-auto gap-x-[6.875rem] px-5'>
           <About />
           <Habilities />
           <Experiences />

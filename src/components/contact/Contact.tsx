@@ -50,7 +50,7 @@ function Contact() {
   }
 
   return (
-    <div className="flex container mx-auto justify-center my-12 px-15 flex-col gap-20" id="contact">
+    <div className="flex container mx-auto justify-center py-24 px-5 flex-col gap-20" id="contact">
       <div className="w-full bg-(--card-background) shadow-lg/40 rounded-2xl p-8 text-white">
         <h2 className="pb-6 text-[2.438rem] font-medium">Contato</h2>
 
@@ -119,7 +119,7 @@ function Contact() {
 
         </form>
       </div>
-      <div className="flex justify-center gap-11">
+      <div className="md:flex justify-center gap-11">
         <a href="mailto:luanemidio.dev@gmail.com">
           <div className="contact-option">
             <SiGmail size={64} />

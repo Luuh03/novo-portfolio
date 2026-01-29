@@ -5,13 +5,13 @@ import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si"
 function Home() {
   return (
     <>
-      <div className="flex justify-center bg-(--card-background) py-16">
-        <div className="ml-9 lg:ml-0 container grid sm:grid-cols-2 lg:grid-cols-3 gap-9 lg:gap-0">
+      <div className="flex justify-center bg-(--card-background) py-16 max-sm:px-6" id="hero">
+        <div className="container grid sm:grid-cols-2 lg:grid-cols-3 gap-9 lg:gap-0">
           <img src="https://ik.imagekit.io/j8alkuh75t/Portf%C3%B3lio/foto_principal?updatedAt=1758736922057"
             alt="Foto Luan Queiroz com fundo degrade azul"
             className="max-h-52 place-self-center sm:place-self-start lg:place-self-center sm:col-span-2 lg:col-span-1" />
 
-          <div className="flex flex-col justify-center">
+          <div className=" flex flex-col justify-center">
             <h1 className="font-semibold text-white text-2xl">Olá! Eu sou o <br />
             <span className="text-blue-400 text-4xl leading-9">Luan Queiroz</span></h1>
 

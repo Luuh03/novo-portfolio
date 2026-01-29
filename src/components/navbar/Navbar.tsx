@@ -28,7 +28,7 @@ function Navbar({ menuState, onMenuToggle, onMenuClose }: Readonly<NavbarProps>)
     {menuState === 'closed' && (
       <header className='fixed z-10 w-full bg-(--card-background)/40 flex justify-around items-center backdrop-blur-sm border-b-1 border-(--blue)'>
 
-        <a href="#inicio">
+        <a href="#hero">
           <img src={logo} alt="Logo com iniciais LQ" className='max-h-16' />
         </a>
 
@@ -64,7 +64,7 @@ function Navbar({ menuState, onMenuToggle, onMenuClose }: Readonly<NavbarProps>)
         <header ref={menuRef} className='fixed z-10 w-full bg-(--card-background)/40 backdrop-blur-sm border-b-1 border-(--blue)'>
 
           <div className="w-full flex justify-around">
-            <a href="#inicio">
+            <a href="#hero">
               <img src={logo} alt="Logo com iniciais LQ" className='max-h-16' />
             </a>
 

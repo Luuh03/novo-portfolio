@@ -39,47 +39,28 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         ref={contentRef}
         role="dialog"
         aria-modal="true"
-        className="bg-(--card-background)/90 rounded-2xl shadow-xl max-w-4xl w-full p-6 animate-scaleIn">
+        className="relative bg-(--card-background)/90 rounded-2xl shadow-xl max-w-4xl w-full animate-scaleIn overflow-hidden m-6">
 
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-3xl text-white font-semibold">{project.name}</h2>
-          <HiX size={28} fill="white" className="cursor-pointer transition duration-150 hover:bg-white/20 rounded-full" onClick={onClose} />
+        <HiX size={32} fill="white"
+          className="cursor-pointer transition duration-150 hover:bg-white/20 rounded-full absolute z-10
+          top-4 right-4"
+          onClick={onClose}
+        />
+
+        <div className="relative w-full h-40 lg:h-60 overflow-hidden max-sm:hidden">
+          <img src={project.prints[0]} alt={project.name} className="w-full" />
+
+          <div className="
+            absolute inset-0
+            bg-gradient-to-t from-card-background/100 via-card-background/50 to-transparent
+          "></div>
         </div>
-        <div className="grid grid-cols-2 gap-8">
-          <div className="flex flex-col gap-5">
-            <img src={project.prints[0]} alt="" className="rounded-lg" />
 
-            <div className="flex gap-3 justify-between">
-              {project.deploy && (
-                
-                <a href={project.deploy} target="_blank" rel="noopener noreferrer"
-                  className="flex gap-2 items-center text-white p-2 bg-(--blue) hover:bg-(--dark-blue) rounded-lg transition duration-200">
-                  <HiExternalLink size={24} fill="white" />
-                  Acessar projeto
-                </a>
-              )}
+        <div className="flex flex-col md:flex-row justify-between md:items-center py-3.5 px-6 gap-6">
+          <h2 className=" text-2xl md:text-4xl lg:text-5xl text-white font-semibold">{project.name}</h2>
 
-              <a href={project.github} target="_blank" rel="noopener noreferrer"
-                className="flex gap-2 items-center text-white p-2 bg-violet-800 hover:bg-violet-950 rounded-lg transition duration-200">
-                <SiGithub size={24} />
-                Acessar repositório
-              </a>
-            </div>
-
-            <span className="text-(--text-color)">
-              {project.completionDate === undefined ? (
-                "Em andamento"
-              ) : (
-                project.completionDate
-              )}
-            </span>
-
-          </div>
-
-          <div>
-            <p className="mb-4 text-(--text-color) whitespace-pre-line">{project.about}</p>
-
-            <h4 className="font-medium text-(--light-blue) pb-3 pt-5">Tecnologias:</h4>
+          <div className="max-sm:hidden">
+            <h4 className="font-medium text-(--light-blue) pb-3">Tecnologias:</h4>
             <div className="flex gap-3 flex-wrap">
               {
                 project.technologies.map((tech) => (
@@ -88,6 +69,36 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               }
             </div>
           </div>
+        </div>
+
+        <div className="px-6 pb-6 flex flex-col gap-4">
+          
+          <p className="text-(--text-color) whitespace-pre-line">{project.about}</p>
+          
+          <div className="flex gap-6 justify-center">
+            {project.deploy && (
+
+              <a href={project.deploy} target="_blank" rel="noopener noreferrer"
+                className="flex gap-2 items-center text-white p-2 bg-(--blue) hover:bg-(--dark-blue) rounded-lg transition duration-200 max-sm:text-center">
+                <HiExternalLink size={24} className="max-sm:hidden"/>
+                Acessar projeto
+              </a>
+            )}
+
+            <a href={project.github} target="_blank" rel="noopener noreferrer"
+              className="flex gap-2 items-center text-white p-2 bg-violet-800 hover:bg-violet-950 rounded-lg transition duration-200 max-sm:text-center">
+              <SiGithub size={24} className="max-sm:hidden" />
+              Acessar repositório
+            </a>
+          </div>
+
+          <span className="flex justify-center text-(--text-color)">
+            {project.completionDate === undefined ? (
+              "Em andamento"
+            ) : (
+              project.completionDate
+            )}
+          </span>
         </div>
 
       </div>
