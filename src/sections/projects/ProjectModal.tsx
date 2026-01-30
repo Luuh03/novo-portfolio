@@ -47,7 +47,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           onClick={onClose}
         />
 
-        <div className="relative w-full h-40 lg:h-60 overflow-hidden max-sm:hidden">
+        <div className="relative w-full h-40 lg:h-50 overflow-hidden max-sm:hidden">
           <img src={project.prints[0]} alt={project.name} className="w-full" />
 
           <div className="

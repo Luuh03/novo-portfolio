@@ -1,4 +1,4 @@
-import type { Email, FormErrors } from "../models/Email";
+import type { Email, FormErrors } from "../types/Email";
 
 
 export function validate(values: Email): FormErrors {

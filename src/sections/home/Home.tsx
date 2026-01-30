@@ -20,7 +20,7 @@ function Home() {
             <button className="flex py-3 px-6 bg-(--blue) gap-1 text-white rounded-lg max-w-[9.75rem]
               transition duration-200 hover:bg-(--dark-blue) cursor-pointer">
               <HiDocumentDownload size={24} />
-              <a href="https://drive.google.com/uc?export=download&id=12-GS1_dxwjB4NMFR2JpV9BWy2Ctabju7">Baixar CV</a>
+              <a href="https://drive.google.com/uc?export=download&id=14hE3bdsNlGuXwD1Kk_cBTKIaHg7RYmH2">Baixar CV</a>
             </button>
           </div>
 

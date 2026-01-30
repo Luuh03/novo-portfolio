@@ -1,4 +1,5 @@
-import type { Technology } from "../habilities/HabilitiesInfo"
+import { AnimatedFadeIn } from "../../components/fadeIn/AnimatedFadeIn"
+import type { Technology } from "../../sections/habilities/HabilitiesInfo"
 
 interface Experience {
   companyLogo: string,
@@ -18,7 +19,8 @@ interface ExperienceProps {
 
 function ExperienceCard({ experience }: ExperienceProps) {
   return (
-    <div className="bg-(--card-background) rounded-2xl p-9 text-(--text-color) shadow-lg/40">
+    <AnimatedFadeIn>
+      <div className="bg-(--card-background) rounded-2xl p-9 text-(--text-color) shadow-lg/40">
       <div className="flex gap-3 justify-between items-center max-xm:items-start max-xm:flex-col-reverse">
         <img src={experience.companyLogo} alt={`Logo ` + experience.companyName}
           className="w-32" />
@@ -49,6 +51,7 @@ function ExperienceCard({ experience }: ExperienceProps) {
       }
 
     </div>
+    </AnimatedFadeIn>
   )
 }
 

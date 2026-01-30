@@ -1,5 +1,5 @@
-import Techs from "../components/habilities/HabilitiesInfo"
-import type { Technology } from "../components/habilities/HabilitiesInfo";
+import Techs from "../sections/habilities/HabilitiesInfo"
+import type { Technology } from "../sections/habilities/HabilitiesInfo";
 
 export const addTechs = (techNames: string[]): Technology[] => {
   const allTechs = Techs.flatMap((t) => t.list);
