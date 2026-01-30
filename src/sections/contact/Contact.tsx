@@ -123,7 +123,7 @@ function Contact() {
         </div>
       </AnimatedFadeIn>
       <AnimatedFadeIn>
-        <div className="md:flex justify-center gap-11">
+        <div className="flex flex-col md:flex-row justify-center gap-11">
           <a href="mailto:luanemidio.dev@gmail.com">
             <div className="contact-option">
               <SiGmail size={64} />
